@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #343a40;
+}
+
+.lowest-price-section {
+    background-color: #cdfbb1;
+    border: 1px solid rgba(148, 213, 69, 0.25);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.lowest-price-section h1 {
+    color: #856404;
+}
+
+.lowest-price-section p {
+    color: #856404;
+    font-size: 1.1em;
+}
+
+.price-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.price-list li {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.price-list li:nth-child(even) {
+    background-color: #f1f3f5;
+}
+
+.item-title {
+    font-weight: bold;
+    color: #495057;
+}
+
+.item-price {
+    font-size: 1.2em;
+    color: #28a745;
+}
+
+.subcategory-name {
+    font-size: 0.9em;
+    color: #6c757d;
+}

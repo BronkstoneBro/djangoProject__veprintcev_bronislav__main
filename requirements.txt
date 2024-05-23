@@ -1,0 +1,5 @@
+#For the settings data
+pydantic==2.7.1
+
+
+Django~=5.0.6

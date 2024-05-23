@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Django Unchained</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Bebas Neue', cursive;
+            background: url('/static/images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #FFF;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон для читаемости текста */
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 20px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #FFF;
+            background-color: #8B0000;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px #555;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #5A0000;
+        }
+
+        .button:active {
+            background-color: #5A0000;
+            box-shadow: 0 2px #333;
+            transform: translateY(2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome To My Project, Django Unchained!!! </h1>
+        <p>The adventure of Django awaits you...</p>
+        <a href="/admin/" class="button">Enter the Admin Panel</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Prices</title>
+    <link rel="stylesheet" href="{% static 'car_details/styles.css' %}">
+</head>
+<body>
+    <div class="lowest-price-section">
+        <h1>Lowest Price</h1>
+        <p>{{ lowest_price_result }}</p>
+    </div>
+
+    <h1>All Details Sorted by Price</h1>
+    <ul class="price-list">
+        {% for title, price, subcategory_name in sorted_details %}
+            <li>
+                <div>
+                    <span class="item-title">{{ title }}</span>
+                    <br>
+                    <span class="subcategory-name">(SubCategory: {{ subcategory_name }})</span>
+                </div>
+                <span class="item-price">{{ price }} грн</span>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
