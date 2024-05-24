@@ -34,7 +34,10 @@ class Command(BaseCommand):
             for item in data:
                 title = item.get('name')
                 price = item.get('price')
-                if not title or not price:
+                url = item.get('url')
+                image = item.get('image')
+
+                if not title or not price or not url or not image:
                     self.stderr.write(f"Missing data in item: {item}")
                     continue
 
@@ -44,7 +47,7 @@ class Command(BaseCommand):
                     self.stderr.write(f"Invalid price value: {price}")
                     continue
 
-                CarDetail.objects.create(title=title, price=price, subcategory=subcategory)
+                CarDetail.objects.create(title=title, price=price, url=url, image=image, subcategory=subcategory)
                 self.stdout.write(f"Added car detail: {title} with price {price} to subcategory {subcategory.name}")
 
         self.stdout.write(self.style.SUCCESS('Successfully imported car details'))

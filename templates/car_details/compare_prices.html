@@ -15,17 +15,19 @@
 
     <h1>All Details Sorted by Price</h1>
     <ul class="price-list">
-        {% for title, price, subcategory_name in sorted_details %}
+        {% for detail in sorted_details %}
             <li>
-                <div>
-                    <span class="item-title">{{ title }}</span>
-                    <br>
-                    <span class="subcategory-name">(SubCategory: {{ subcategory_name }})</span>
+                <div class="item-image">
+                    <img src="{{ detail.image }}" alt="{{ detail.title }}">
                 </div>
-                <span class="item-price">{{ price }} грн</span>
+                <div class="item-info">
+                    <a href="{{ detail.url }}" target="_blank" class="item-title">{{ detail.title }}</a>
+                    <br>
+                    <span class="subcategory-name">(SubCategory: {{ detail.subcategory_name }})</span>
+                </div>
+                <span class="item-price">{{ detail.price }} грн</span>
             </li>
         {% endfor %}
     </ul>
 </body>
 </html>
-

@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .utils import find_lowest_price_among_subcategories, get_sorted_details_among_subcategories
 
-
 def compare_prices_view(request):
     subcategory_names = ['bampers_motoland', 'bampers_autoliga', 'bampers_other']
 
@@ -14,5 +13,3 @@ def compare_prices_view(request):
         'sorted_details': sorted_details,
     }
     return render(request, 'car_details/compare_prices.html', context)
-
-

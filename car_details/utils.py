@@ -36,4 +36,10 @@ def get_sorted_details_among_subcategories(subcategory_names):
         all_details.extend(details)
 
     sorted_details = sorted(all_details, key=lambda x: x.price)
-    return [(detail.title, detail.price, detail.subcategory.name) for detail in sorted_details]
+    return [{
+        'title': detail.title,
+        'price': detail.price,
+        'subcategory_name': detail.subcategory.name,
+        'url': detail.url,
+        'image': detail.image,
+    } for detail in sorted_details]

@@ -19,6 +19,8 @@ class SubCategory(models.Model):
 class CarDetail(models.Model):
     title = models.CharField(max_length=200)
     price = models.FloatField()
+    url = models.URLField(null=True, blank=True)
+    image = models.URLField(null=True, blank=True)
     subcategory = models.ForeignKey(SubCategory, related_name='car_details', on_delete=models.CASCADE)
 
     def __str__(self):
