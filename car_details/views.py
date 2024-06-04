@@ -13,3 +13,5 @@ def compare_prices_view(request):
         "sorted_details": sorted_details,
     }
     return render(request, "car_details/compare_prices.html", context)
+
+
