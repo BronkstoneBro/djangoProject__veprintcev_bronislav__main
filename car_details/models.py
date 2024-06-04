@@ -25,3 +25,5 @@ class CarDetail(models.Model):
 
     def __str__(self):
         return self.title
+
+#decimalfield

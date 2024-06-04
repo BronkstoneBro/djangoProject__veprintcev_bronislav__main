@@ -1,14 +1,16 @@
 import json
 import os
+
 from django.core.management.base import BaseCommand
+
 from car_details.models import CarDetail, Category, SubCategory
 
 
 class Command(BaseCommand):
-    help = 'Import car details from JSON file'
+    help = "Import car details from JSON file"
 
     def add_arguments(self, parser):
-        parser.add_argument('file_path', type=str, help='Path to the JSON file')
+        parser.add_argument("file_path", type=str, help='Path to the JSON file')
         parser.add_argument('category_name', type=str, help='Category name')
         parser.add_argument('subcategory_name', type=str, help='Subcategory name')
 
