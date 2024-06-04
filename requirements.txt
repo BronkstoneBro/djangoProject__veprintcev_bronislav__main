@@ -1,5 +1,6 @@
 #For the settings data
 pydantic==2.7.1
 
-
+#For the database
 Django~=5.0.6
+
